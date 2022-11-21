@@ -5,7 +5,8 @@ const Handler: NextApiHandler = async (_req, res) => {
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
 
-  await page.goto('https://generate-pdf-with-next.vercel.app')
+
+  // await page.goto('https://generate-pdf-with-next.vercel.app')
   await page.emulateMediaType('screen')
 
   // Create PDF Buffer
@@ -14,10 +15,11 @@ const Handler: NextApiHandler = async (_req, res) => {
   console.log(buffer)
 
   // Return pdf buffer to caller.
-  res.end(buffer) 
+  // res.end(buffer) 
 
   // Close browser **after** we returned the PDF to the caller.
   await browser.close()
+  res.send("good")
 }
 
 export default Handler

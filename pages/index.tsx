@@ -8,7 +8,7 @@ const Home: NextPage = () => {
       <a href="/api/pdf" download="generated_pdf.pdf" className="downloadBtn">
         Download PDF
       </a>
-      <div className={styles.page}> sagor sagor sagor sagor </div>
+      <div className={styles.page}> this is sagor my name is sagor </div>
       {/*   <Page>
         <h1>Generated PDF</h1>
         <p>As you can see you can scroll without issues and select text.</p>
