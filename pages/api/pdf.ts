@@ -11,6 +11,8 @@ const Handler: NextApiHandler = async (_req, res) => {
   // Create PDF Buffer
   const buffer = await page.pdf({ format: 'a4' })
 
+  console.log(buffer)
+
   // Return pdf buffer to caller.
   res.end(buffer) 
 
