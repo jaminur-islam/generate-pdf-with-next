@@ -6,7 +6,8 @@ const Handler: NextApiHandler = async (_req, res) => {
   const page = await browser.newPage()
 
 
-  // await page.goto('https://generate-pdf-with-next.vercel.app')
+  await page.goto('https://generate-pdf-with-next.vercel.app')
+
   await page.emulateMediaType('screen')
 
   // Create PDF Buffer
