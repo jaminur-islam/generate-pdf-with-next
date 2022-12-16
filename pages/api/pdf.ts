@@ -2,7 +2,7 @@ import { NextApiHandler } from "next";
 import puppeteer from "puppeteer";
 
 const Handler: NextApiHandler = async (_req, res) => {
-  const browser = await puppeteer.launch()
+  const browser = await puppeteer.launch({headless:false})
   const page = await browser.newPage()
 
 
